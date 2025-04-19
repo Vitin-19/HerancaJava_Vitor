@@ -1,17 +1,17 @@
 package models;
 
-import java.lang.reflect.Array;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-public class Funcionario {
+public class Funcionario extends Pessoa {
     private String nome;
     private double salario;
     private String departamento;
-    public ArrayList<Array> pontos = new ArrayList<Array>();
+    public ArrayList<String[]> pontos = new ArrayList<String[]>();
 
     public Funcionario(String nome, double salario, String departamento){
+        super(nome, departamento);
         setNome(nome);
         setSalario(salario);
         setDepartamento(departamento);
@@ -39,9 +39,10 @@ public class Funcionario {
     }
 
     public void mostrarDados(){
-        System.out.println("Nome: " + this.nome);
-        System.out.println("Salario: " + this.salario);
-        System.out.println("Nome: " + this.nome);
+        System.out.println("Nome: " + getNome());
+        System.out.printf("Salario: R$ %.2f \n" + getSalario());
+        System.out.println("Departamento: " + getDepartamento());
+        System.out.println("Cargo: Funcionário");
     }
 
     public void baterPonto(){
@@ -49,9 +50,14 @@ public class Funcionario {
         DateTimeFormatter modeloTempo = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         String ponto = tempo.format(modeloTempo);
         int tamanhoArray = pontos.size();
+        String[] ultimoPonto = pontos.get(tamanhoArray - 1);
 
-        if(pontos.get(tamanhoArray - 1)[1].equals("entrada")){
-
+        if(ultimoPonto[1].equals("entrada")){
+            String[] novoPonto = {ponto,"saída"};
+            pontos.add(novoPonto);
+        }else{
+            String[] novoPonto = {ponto,"entrada"};
+            pontos.add(novoPonto);
         } 
     }
 }
