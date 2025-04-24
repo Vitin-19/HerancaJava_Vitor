@@ -31,4 +31,4 @@ java src/Main.java
 This project was created for studies, school activities and portifolio reasons. Its use, modification and redistribution are not allowed without authorization.<br>
 All of the project is on portuguese.<br>
 Because it's an school activity, all of the .class file has been commited.<br>
-<b>Only for my teachers</b>: Link of the short video explaning the chalanges solved -> 
+<b>Only for my teachers</b>: Link of the short video explaning the chalanges solved -> <a src="https://youtu.be/4NJ8sjWQPwc">https://youtu.be/4NJ8sjWQPwc</a>
