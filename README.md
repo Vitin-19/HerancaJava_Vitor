@@ -7,7 +7,7 @@ The technology used on this project was Java
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="50" height="50"/>.<br><br>
 
 To execute it, you need to execute the following commands in order in console:<br><br>
-Clone:
+Clone the repository:
 ```shel
 git clone https://github.com/Vitin-19/HerancaJava_Vitor.git
 ```
